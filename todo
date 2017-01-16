@@ -1,0 +1,66 @@
+things to do:
+-------------------------------
+
+number typing, [number]f[amount after decimal], [number]l, [number]s, [number]d, [number]i8/16/i32/i64/i128
+same for above but with u[type]; ul, ui64, uf.5
+something with variable bounding; a = 5 
+[operator]= ; +=, -=, etc
+[operator][operator] ; ++, --, **, //
+>, <, >>, <<, >>>, <<<, <>, ><
+other operator / key symbols; !, @, #, $, %, &, ~, `, _, ',', \, |
+equivilancy expansion; :=, ::=, :, ::, ~=
+more enclosing symbols; (), {}, '', ``, 
+commenting; need to figure out what to use
+variable types and casting
+define series as a syntax structure or a variable type: 1 + .9(1) + .9^2(.25)... etc
+PARSING
+symbol table --> keyword analysis
+
+
+crazy things to do
+------------------------------
+write SQL lexer and parser
+SQL stuff
+
+
+even crazier things to do
+------------------------------
+markov syntax generation/prediction
+templated parser
+syntax template --> non-context free
+
+
+
+examples of stuff or something
+--
+
+var is mostly for readability; it can also be used to declare that a variable is purely for storing data and not a function, although it can still be a function pointer
+var i = 6
+var i = 6i32
+var i = 6 i32
+i = 6
+...
+int i = 6i32
+i32 i = 6
+int32 i = 6
+...
+i = 6   <---   type is inferred/defined/coerced from operator on use
+i = 6f2 <--- type is defined and predetermined for the operator and must be casted to be a different type exluding similar types
+con/const will create constant types
+
+int32 i = 6.1 <--- value type mismatch by default, compiler flag to coerce similar types can be enabled in which this will be demoted to a warning
+int i = 6f2   <--- type error
+i = 6.1i16	  <--- value declaration error
+
+func thisfunction : (return1, return2, ...) = {...} <--- unconditional returns based on variable name; similar to MATLAB returns
+func thisfunction = (return1, return2, ...) : {...} <--- same thing as above
+variable = thisfunction(var1, var2, ...)
+
+thisvar = thisfunction(var1, var2, ...)::$2 <--- will give you only the second variable from the return
+thisvar = thisfunction(var1, var2, ...)::return1 <--- will give you the variable named return1, whether it is the first, second, or over-ninethousandth var
+
+---- still thinking about these things ----
+thisvar $2 = thisfunction(var1, var2, ...) <--- same as the first one
+thisvar $return1 = thisfunction(var1, var2, ...) <--- same as the first one
+----
+
