@@ -106,6 +106,8 @@ def runTests():
 		tokens = []
 		index = 0
 
+	return
+
 
 def clearAll():
 	global charType
@@ -116,6 +118,8 @@ def clearAll():
 	currentChar = ""
 	numberString = ""
 	decimalAmount = 0
+
+	return
 
 
 def addChar():
@@ -197,6 +201,8 @@ def innerDetermine():
 	else:
 		print "other"
 		charType = OTHER
+
+	return
 
 
 def determineChar():
